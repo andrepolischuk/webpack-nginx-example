@@ -1,6 +1,6 @@
-const webpack = require('webpack')
+var webpack = require('webpack')
 
-const config = {
+var config = {
   entry: './index',
   output: {
     filename: 'bundle.js',
