@@ -1,12 +1,12 @@
-# webpack-through-nginx-example
+# webpack-nginx-example
 
-> An example of webpack through nginx
+> An example of enviroment with webpack and nginx
 
 ## Install
 
 ```sh
-git clone https://github.com/andrepolischuk/webpack-through-nginx-example
-cd webpack-through-nginx-example
+git clone https://github.com/andrepolischuk/webpack-nginx-example
+cd webpack-nginx-example
 ```
 
 Append the follow line into the `hosts` file:
@@ -18,7 +18,7 @@ Append the follow line into the `hosts` file:
 Link nginx config and start:
 
 ```sh
-ln -s $PWD/nginx-config /usr/local/etc/nginx/servers/nginx-config
+ln -s $PWD/nginx.awesome.conf /usr/local/etc/nginx/servers/nginx.awesome.conf
 sudo nginx
 ```
 
