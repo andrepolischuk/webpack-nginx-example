@@ -1,0 +1,34 @@
+upstream login {
+  server awesome.app:80 backup;
+  server localhost:3001;
+}
+
+upstream profile {
+  server awesome.app:80 backup;
+  server localhost:3002;
+}
+
+server {
+  listen 80;
+  server_name awesome.app;
+  sendfile off;
+  proxy_max_temp_file_size 0;
+
+  location /login {
+    proxy_set_header Host      $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_pass http://login;
+  }
+
+  location /profile {
+    proxy_set_header Host      $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_pass http://profile;
+  }
+
+  location / {
+    proxy_set_header Host      $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_pass http://awesome.app;
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "webpack-through-nginx-example",
+  "version": "0.0.0",
+  "description": "An example of webpack through nginx",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack -p",
+    "start": "cross-env NODE_ENV=development webpack-dev-server -d --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrepolischuk/webpack-through-nginx-example.git"
+  },
+  "author": "Andrey Polischuk <me@andrepolischuk.com> (https://andrepolischuk.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrepolischuk/webpack-through-nginx-example/issues"
+  },
+  "homepage": "https://github.com/andrepolischuk/webpack-through-nginx-example",
+  "devDependencies": {
+    "cross-env": "^1.0.7",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
