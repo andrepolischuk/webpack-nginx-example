@@ -14,7 +14,7 @@ if (process.env.NODE_ENV !== 'production') {
     inline: true,
     historyApiFallback: true,
     port: 3001,
-    disableHostCheck: true
+    host: 'awesome.app'
   }
 }
 
